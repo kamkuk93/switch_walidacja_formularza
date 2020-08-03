@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form>
+            <div class="logo"></div>
+
+            <div class="form-wrapper">
+                <div class="box-left"></div>
+                <div class="box-right">
+                    <div class="form-box">
+                        <div class="change-box">
+                            <p id="login-btn" class="active-btn">Zaloguj się</p>
+                            <div class="vertical-line"></div>
+                            <p id="signin-btn" class="unactive-btn">Zarejestruj się</p>
+                            <div class="underline"></div>
+                        </div>
+
+
+
+                        <div class="login-box">
+
+                            <div class="facebook-btn">Facebook</div>
+                            <div class="gmail-btn">Gmail</div>
+                            <div class="separate-line">
+                                <div class="horizontal-line"></div>
+                                <div class="or-between">lub</div>
+                                <div class="horizontal-line"></div>
+                            </div>
+
+                            <div class="form-input">
+                                <input id="login-input-email" type="text" class="input" name="email-login"
+                                    autocomplete="off" required>
+                                <label for="email" class="label">
+                                    <span class="label-name">Email:</span>
+                                </label>
+                            </div>
+                            <p class="text-under-line">Poprawnie</p>
+
+                            <div class="form-input">
+                                <input id="login-input-password" type="text" class="input" name="password-login"
+                                    autocomplete="off" required>
+                                <label for="password" class="label">
+                                    <span class="label-name">Hasło:</span>
+                                </label>
+                            </div>
+                            <p class="text-under-line">Poprawnie</p>
+                            <div class="login-btn-send">Zaloguj się</div>
+                            <p class="forget-password">Zapomniałeś hasła?</p>
+
+                        </div>
+
+
+                        <div class="signin-box">
+
+                            <div class="form-input-box">
+                                <div class="form-input">
+                                    <input type="text" id="signin-input-email" class="input" name="email-input"
+                                        autocomplete="off" required>
+                                    <label for="email-input" class="label">
+                                        <span class="label-name">Email:</span>
+                                    </label>
+                                </div>
+                                <p class="signin-error" style="color: #F7F7F7;" onselectstart="return false;">Wpisz
+                                    adres email</p>
+                            </div>
+
+
+
+                            <div class="form-input-box">
+                                <div class="form-input">
+                                    <input type="text" id="signin-input-password" class="input" name="password"
+                                        autocomplete="off" required>
+                                    <label for="password" class="label">
+                                        <span class="label-name">Hasło:</span>
+                                    </label>
+                                </div>
+                                <p class="signin-error">Hasło musi zawiwrać min. 5 znaków i wielką literę</p>
+                            </div>
+
+
+                            <div class="form-input-box">
+                                <div class="form-input">
+                                    <input type="text" id="signin-input-password-two" class="input" name="password"
+                                        autocomplete="off" required>
+                                    <label for="password" class="label">
+                                        <span class="label-name">Powtórz hasło:</span>
+                                    </label>
+                                </div>
+                                <p class="signin-error" style="color: #F7F7F7;">Powtórz hasło</p>
+                            </div>
+
+
+
+
+
+                            <div class="tos-box">
+                                <input type="checkbox" id="tos" name="tos" hidden>
+                                <label for="tos" class="tos-input-box"></label>
+
+                                <label for="tos" class="tos-label"> Akceptuję politykę prywatoności oraz regulamin
+                                    strony internetowej</label>
+                            </div>
+
+
+                            <button class="submit-btn-second">Zarejestruj się</button>
+
+                            <!-- <div class="submit-btn-second">Zarejestruj się</div> -->
+
+                            <div class="social-media-btns">
+
+                                <div class="facebook-btn-second">Facebook</div>
+                                <div class="gmail-btn-second">Gmail</div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

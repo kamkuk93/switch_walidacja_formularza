@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: gray;
+}
+
+.wrapper {
+    position: relative;
+    width: 1366px;
+    height: 768px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #000;
+}
+
+.form-wrapper {
+    /* background-color: lightcoral; */
+    width: 100%;
+    height: 768px;
+    display: flex;
+}
+
+.logo {
+    position: absolute;
+    left: 80px;
+    top: 40px;
+    background-image: url(./assets/logo.png);
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+    width: 100px;
+    height: 32px;
+    outline:none;
+}
+
+.box-left {
+    width: 40%;
+    height: 100%;
+    /* background-color: indigo; */
+    background-image: url(./assets/developer.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position-x: -330px;
+
+
+}
+
+.box-right {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60%;
+    height: 100%;
+    background-color: #F7F7F7;
+}
+
+.form-box{
+    width: 380px;
+    height: auto;
+    /* background-color: rgb(145, 140, 140); */
+}
+
+.change-box{
+    position: relative;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 30px;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.unactive-btn {
+    font-size: 19px;
+    font-weight: 400;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.active-btn{
+    font-size: 19px;
+    font-weight: 800;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.underline{
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    width: 124px;
+    height: 4px;
+    background-color: #ED1C24;
+    transition: 0.3s ease-in-out;
+}
+
+.underline-right{
+    left: 190px;
+    width: 160px;
+}
+
+/* zmiana przycisków */
+
+.login-box{
+    display: block;
+    height: 530px;
+    /* background-color: rgb(68, 0, 255); */
+}
+
+.facebook-btn, .gmail-btn, .login-btn-send {
+    margin-top: 20px;
+    height: 44px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 22px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.submit-btn{
+    margin-top: 40px;
+}
+
+.separate-line {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.horizontal-line {
+    width: 180px;
+    height: 2px;
+    background-color: black;
+}
+
+.or-between{
+    width: 60px;
+    text-align: center;
+    font-size: 19px;
+}
+
+.form-input{
+    position: relative;
+    height: 70px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.input{
+    width: 100%;
+    height: 100%;
+    font-size: 19px;
+    padding-top: 35px;
+    background: transparent;
+    border: none;
+    outline: none;
+   }
+
+.label{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 2px solid black;
+}
+
+.label::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1;
+    width: 100%;
+    height: 100%;
+    border-bottom: 4px solid #08bb68;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.label-name {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    transition: all 0.3s ease;
+}
+
+.input:focus + .label .label-name,
+.input:valid + .label .label-name{
+    transform: translateY(-160%);
+    font-size: 14px;
+    color: #08bb68;
+    left: 0;
+}
+
+.input:focus + .label::after, 
+.input:valid + .label::after {
+    transform: translateX(0%);
+}
+
+.text-under-line, .signin-error{
+    margin-top: 6px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.forget-password{
+    margin-top: 31px;
+    text-align: right;
+    font-size: 14px;
+    opacity: 0.3;
+}
+
+
+
+
+
+/* box do rejestracji */
+
+
+.signin-box{
+    display: none;
+    height: 530px;
+    /* background-color: crimson; */
+
+}
+
+
+.tos-box{
+    display: flex;
+    align-items: center;
+    margin: 30px 0px 0 0px;
+}
+
+.tos-input-box{
+    position: relative;
+    display: block;
+ 
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: rgb(168, 168, 168);
+    /* border: 1px solid black; */
+    transition: background-color 0.4s;
+}
+
+.tos-input-box-error{
+    border: 4px solid #ED1C24;
+}
+
+#tos:checked ~ .tos-input-box {
+    background-color: #08bb68;
+}
+
+.tos-input-box::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 16px;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(40deg) scale(10);
+    opacity: 0;
+    transition: all 0.4s;
+    pointer-events: none;
+
+}
+
+
+#tos:checked ~ .tos-input-box::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotateZ(40deg) scale(1);
+}
+
+
+
+.tos-label{
+    width: 250px;
+    display: block;
+    font-size: 14px;
+    /* background-color: rgb(76, 54, 87); */
+    margin-left: 30px;
+}
+
+.submit-btn-second{
+    /* display: block; */
+    margin-top: 30px;
+    width: 100%;
+    height: 44px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    border-radius: 22px;
+    border: 1px solid black;
+    background-color: transparent;
+}
+
+
+
+.social-media-btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    height: 44px;
+}
+
+
+.facebook-btn-second, .gmail-btn-second{
+    width: 180px;
+    text-align: center;
+    padding-top: 10px;
+
+    border: 1px solid black;
+    border-radius: 22px;
+}
+
